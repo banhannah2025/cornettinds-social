@@ -1,6 +1,13 @@
 # Robin Cornett — Professional Portfolio
 
-A standalone Next.js portfolio presenting Robin Cornett's experience, capabilities, values, and services.
+A standalone Next.js portfolio presenting Robin Cornett's experience, capabilities, values, services, active products, and public service work.
+
+## Portfolio Coverage
+
+- Business, operations, construction, technical consulting, software, and research support
+- Cornett Industries and Blended Works product portfolio
+- Blended Works Legal AI, Blended Basecamp, The Blended Planner, Mission Operations Toolkit, and Life Happens
+- Education, technical credentials, professional experience, values, and mission service
 
 ## Development
 

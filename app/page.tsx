@@ -34,6 +34,45 @@ const experience = [
   "Software development",
 ];
 
+const projects = [
+  {
+    status: "Evolving platform",
+    title: "Blended Works",
+    category: "Brand · Content · Digital services",
+    copy: "A family-centered platform for practical tools, honest stories, daily devotionals, and services that help people and families rebuild with purpose.",
+  },
+  {
+    status: "In development",
+    title: "Blended Works Legal AI",
+    category: "Legal technology · Source intelligence",
+    copy: "A research workspace designed for interconnected cases, verified primary and secondary sources, jurisdiction-aware coverage, and clear provenance.",
+  },
+  {
+    status: "Active development",
+    title: "Blended Basecamp",
+    category: "Remote work · Travel operations",
+    copy: "A practical command center for work planning, travel, connectivity, energy, equipment, expenses, mileage, journals, and emergency check-ins.",
+  },
+  {
+    status: "Active development",
+    title: "The Blended Planner",
+    category: "Planning · Family organization",
+    copy: "A calendar and planning journal built to make work, family commitments, and longer-term goals easier to see and manage together.",
+  },
+  {
+    status: "In development",
+    title: "Mission Operations Toolkit",
+    category: "Nonprofit operations · Human-centered systems",
+    copy: "Digital forms, scheduling, incident documentation, spiritual-outcomes reporting, and operational tools shaped by firsthand mission experience.",
+  },
+  {
+    status: "New project",
+    title: "Life Happens",
+    category: "Native Android · Everyday resilience",
+    copy: "A Blended Works Android application now taking shape around a simple idea: life rarely follows the plan, so our tools should help us adapt.",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -45,6 +84,7 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#services">What I offer</a>
+          <a href="#work">Selected work</a>
           <a href="#experience">Experience</a>
           <a className="nav-cta" href="#contact">Let&apos;s talk</a>
         </nav>
@@ -119,6 +159,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="work" id="work">
+        <div className="section-heading work-heading">
+          <div>
+            <p className="section-kicker">Selected work</p>
+            <h2>Ideas shaped by lived experience.</h2>
+          </div>
+          <p>Products and platforms I&apos;m actively building through Cornett Industries and Blended Works.</p>
+        </div>
+        <div className="project-grid">
+          {projects.map((project, index) => (
+            <article className="project-card" key={project.title}>
+              <div className="project-topline">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{project.status}</span>
+              </div>
+              <p className="project-category">{project.category}</p>
+              <h3>{project.title}</h3>
+              <p>{project.copy}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="experience" id="experience">
         <div className="experience-copy">
           <p className="section-kicker">Built in the real world</p>
@@ -134,6 +197,49 @@ export default function Home() {
         </ul>
       </section>
 
+      <section className="credentials">
+        <div>
+          <p className="section-kicker">Education & credentials</p>
+          <h2>Study backed by hands-on work.</h2>
+        </div>
+        <div className="credential-grid">
+          <article>
+            <span>Education</span>
+            <h3>Bachelor&apos;s in Legal Studies</h3>
+            <p>Purdue University</p>
+          </article>
+          <article>
+            <span>Education</span>
+            <h3>Associate&apos;s in International Business</h3>
+            <p>Everest</p>
+          </article>
+          <article>
+            <span>Technical</span>
+            <h3>Universal EPA Technician</h3>
+            <p>Cross-system technical knowledge and field problem-solving.</p>
+          </article>
+          <article>
+            <span>Maritime</span>
+            <h3>U.S. Coast Guard Licensing</h3>
+            <p>Professional maritime training and responsibility.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="service-story">
+        <div className="service-story-number">05—07</div>
+        <div>
+          <p className="section-kicker">Service is part of the work</p>
+          <h2>Technology matters. People matter more.</h2>
+          <p>
+            My work at Olympia Union Gospel Mission keeps every idea grounded in real needs. Alongside security, shelter, and maintenance responsibilities, I write and deliver faith-centered devotionals for mission guests—messages about hope, accountability, grief, reconciliation, and new beginnings.
+          </p>
+          <p>
+            That proximity to people rebuilding their lives shapes how I design: practical first, respectful always, and accessible to the person who needs it most.
+          </p>
+        </div>
+      </section>
+
       <section className="values">
         <blockquote>
           “Build honestly. Serve people. Leave things stronger than you found them.”
@@ -145,7 +251,9 @@ export default function Home() {
         <p className="section-kicker">Start a conversation</p>
         <h2>Have something worth building?</h2>
         <p>Tell me what you&apos;re working toward. We can begin with the problem, the opportunity, or simply the next right step.</p>
-        <span className="contact-status">Contact options coming next</span>
+        <a className="contact-link" href="https://github.com/banhannah2025" target="_blank" rel="noreferrer">
+          View my work on GitHub <span aria-hidden="true">↗</span>
+        </a>
       </section>
 
       <footer>
